@@ -8,6 +8,43 @@
  */
 
 return array(
+	'admin' => array(
+		'models' =>array(
+			'gallery_image' => array(
+				'displayName' => 'Image',
+				'class' => 'ATPGallery\Model\Image',
+				'category' => 'Gallery',
+				'displayColumns' => array('Title', 'Url'),
+				'defaultOrder' => 'post_date DESC',
+				'fields' => array(
+					'Title' => array(
+						'type' => 'Text',
+						'label' => 'Title'
+					),
+					'Url' => array(
+						'type' => 'Text',
+						'label' => 'Url',
+					),
+					'PostDate' => array(
+						'type' => 'Date',
+						'label' => 'Post Date',
+					),
+					'Image' => array(
+						'type' => 'File',
+						'label' => 'Image',
+					),
+					'Thumbnail' => array(
+						'type' => 'File',
+						'label' => 'Thumbnail'
+					),
+					'Description' => array(
+						'type' => 'Html',
+						'label' => 'Image Description'
+					),
+				),
+			),
+		),
+	),
 	'asset_manager' => array(
 		'resolver_configs' => array(
 			'paths' => array(
@@ -41,5 +78,10 @@ return array(
         'template_path_stack' => array(
             __DIR__ . '/../view',
         ),
+	),
+	'view_helpers' => array(
+		'invokables' => array(
+			'resize' => 'ATPCore\View\Helper\ImageResizePath',
+		)
 	),
 );

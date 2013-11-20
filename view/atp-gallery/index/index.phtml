@@ -1,1 +1,18 @@
-Gallery goes here.
+<div class="gallery">
+	<ul class="image-list">
+		<?php foreach($images as $image) { ?>
+			<li>
+				<a href="<?=$this->basePath() . $image->filePath('image')?>">
+					<img src="<?=$this->basePath() . $this->resize(array(
+						'width' => 200,
+						'height' => 200,
+						'mode' => 'fit',
+						'path' => $image->filePath("thumbnail")
+					))?>" />
+				</a>
+				<h3><?=$image->title?></h3>
+				
+			</li>
+		<?php } ?>
+	</ul>
+</div>
