@@ -8,6 +8,7 @@ class Image extends \ATP\ActiveRecord
 	{
 		$this->hasData('Title', 'Url', 'PostDate', 'Image', 'Thumbnail', 'Description')
 			->hasFiles('Image', 'Thumbnail')
+			->isIdentifiedBy('Url')
 			->tableNamespace("gallery");
 	}
 }

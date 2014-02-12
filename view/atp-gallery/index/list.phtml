@@ -1,11 +1,11 @@
 <?php $this->pageType("gallery-list")?>
+<?php $this->breadcrumbs("Gallery", $this->basePath() . "/gallery")?>
+
 <div class="gallery">
-	<h1>Image Gallery</h1>
-	
 	<ul class="image-list">
 		<?php foreach($images as $image) { ?>
 			<li>
-				<a href="<?=$this->basePath() . $image->filePath('image')?>">
+				<a href="<?=$this->basePath() . "/gallery/view/" . $image->url?>">
 					<img src="<?=$this->basePath() . $this->resize(array(
 						'width' => 200,
 						'height' => 200,

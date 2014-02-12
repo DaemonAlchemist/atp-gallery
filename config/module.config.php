@@ -60,7 +60,7 @@ return array(
                     'route'    => '/gallery[/:action[/:id]]',
                     'defaults' => array(
                         'controller'    => 'ATPGallery\Controller\IndexController',
-                        'action'        => 'index',
+                        'action'        => 'list',
                     ),
                 ),
             ),
