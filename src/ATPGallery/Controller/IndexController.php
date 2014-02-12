@@ -19,6 +19,12 @@ class IndexController extends \ATPCore\Controller\AbstractController
 		$url = $this->params('id');
 		$image = new \ATPGallery\Model\Image($url);
 	
+		if(!$image->id)
+		{
+			$this->getResponse()->setStatusCode(404);
+			return;
+		}
+	
 		return new \Zend\View\Model\ViewModel(array(
 			'image' => $image
 		));
