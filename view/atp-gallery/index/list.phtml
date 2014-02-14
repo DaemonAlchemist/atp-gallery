@@ -6,16 +6,17 @@
 	<ul class="image-list">
 		<?php foreach($images as $image) { ?>
 			<li>
-				<a href="<?=$this->basePath() . "/gallery/view/" . $image->url?>">
-					<img src="<?=$this->basePath() . $this->resize(array(
-						'width' => 200,
-						'height' => 200,
-						'mode' => 'fit',
-						'path' => $image->filePath("thumbnail")
-					))?>" />
-				</a>
-				<h3><?=$image->title?></h3>
-				
+				<div class="gallery-list-item">
+					<a href="<?=$this->basePath() . "/gallery/view/" . $image->url?>">
+						<img src="<?=$this->basePath() . $this->resize(array(
+							'width' => $thumbnailSize,
+							'height' => $thumbnailSize,
+							'mode' => 'fit',
+							'path' => $image->filePath("thumbnail")
+						))?>" />
+					</a>
+					<h3><?=$image->title?></h3>
+				</div>				
 			</li>
 		<?php } ?>
 	</ul>

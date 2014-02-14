@@ -8,9 +8,11 @@ class IndexController extends \ATPCore\Controller\AbstractController
 	{
 		$image = new \ATPGallery\Model\Image();
 		$images = $image->loadMultiple(null, array(), array(), "post_date DESC");
+		$thumbSize = $this->config("gallery.thumbnailSize");
 	
 		return new \Zend\View\Model\ViewModel(array(
-			'images' => $images
+			'images' => $images,
+			'thumbnailSize' => $thumbSize,
 		));
 	}
 	

@@ -52,6 +52,9 @@ return array(
 			),
 		),
 	),
+	'gallery' => array(
+		'thumbnailSize' => 200,
+	),
     'router' => array(
         'routes' => array(
             'gallery' => array(
