@@ -79,9 +79,4 @@ return array(
             __DIR__ . '/../view',
         ),
 	),
-	'view_helpers' => array(
-		'invokables' => array(
-			'resize' => 'ATPCore\View\Helper\ImageResizePath',
-		)
-	),
 );
