@@ -45,13 +45,6 @@ return array(
 			),
 		),
 	),
-	'asset_manager' => array(
-		'resolver_configs' => array(
-			'paths' => array(
-				__DIR__ . '/../public',
-			),
-		),
-	),
 	'gallery' => array(
 		'thumbnailSize' => 200,
 	),
@@ -74,9 +67,4 @@ return array(
             'ATPGallery\Controller\IndexController' => 'ATPGallery\Controller\IndexController'
         ),
     ),
-    'view_manager' => array(
-        'template_path_stack' => array(
-            __DIR__ . '/../view',
-        ),
-	),
 );
