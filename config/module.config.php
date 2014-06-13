@@ -16,32 +16,6 @@ return array(
 				'category' => 'Gallery',
 				'displayColumns' => array('Title', 'Url'),
 				'defaultOrder' => 'post_date DESC',
-				'fields' => array(
-					'Title' => array(
-						'type' => 'Text',
-						'label' => 'Title'
-					),
-					'Url' => array(
-						'type' => 'Text',
-						'label' => 'Url',
-					),
-					'PostDate' => array(
-						'type' => 'Date',
-						'label' => 'Post Date',
-					),
-					'Image' => array(
-						'type' => 'File',
-						'label' => 'Image',
-					),
-					'Thumbnail' => array(
-						'type' => 'File',
-						'label' => 'Thumbnail'
-					),
-					'Description' => array(
-						'type' => 'Html',
-						'label' => 'Image Description'
-					),
-				),
 			),
 		),
 	),
