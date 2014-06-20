@@ -10,7 +10,7 @@
 return array(
 	'admin' => array(
 		'models' =>array(
-			'gallery_image' => array(
+			'atpgallery_image' => array(
 				'displayName' => 'Image',
 				'class' => 'ATPGallery\Model\Image',
 				'category' => 'Gallery',
