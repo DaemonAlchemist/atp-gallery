@@ -19,7 +19,8 @@ class IndexController extends \ATPCore\Controller\AbstractController
 	public function viewAction()
 	{
 		$url = $this->params('id');
-		$image = new \ATPGallery\Model\Image($url);
+		$image = new \ATPGallery\Model\Image();
+		$image->loadByUrl($url);
 	
 		if(!$image->id)
 		{
