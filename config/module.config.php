@@ -8,6 +8,11 @@
  */
 
 return array(
+	'modules' => array(
+		'ATPGallery' => array(
+			'version' => '1.0',
+		),
+	),
 	'admin' => array(
 		'models' =>array(
 			'atpgallery_image' => array(
