@@ -1,0 +1,14 @@
+{
+    "name": "daemonalchemist/atp-gallery",
+    "description": "Image gallery module for the ATP framework",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andrew Wittrock",
+            "email": "andy@wittrock.us"
+        }
+    ],
+    "require": {
+		"daemonalchemist/atp-core": "dev-master"
+    }
+}
