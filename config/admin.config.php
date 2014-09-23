@@ -9,6 +9,11 @@ return array(
 				'category' => 'Gallery',
 				'displayColumns' => array('Title', 'Url'),
 				'defaultOrder' => 'post_date DESC',
+				'tabs' => array(
+					'Details' => array('title', 'url', 'post_date'),
+					'Images' => array('image_file', 'thumbnail_file'),
+					'Commentary' => array('description_html'),
+				),
 			),
 		),
 	),
