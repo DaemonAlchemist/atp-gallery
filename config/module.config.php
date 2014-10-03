@@ -3,7 +3,7 @@
 return array(
 	'modules' => array(
 		'ATPGallery' => array(
-			'version' => '1.0',
+			'version' => '0.9.0',
 		),
 	),
 	'gallery' => array(
