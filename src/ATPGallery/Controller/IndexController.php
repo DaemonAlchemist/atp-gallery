@@ -4,13 +4,27 @@ namespace ATPGallery\Controller;
 
 class IndexController extends \ATPCore\Controller\AbstractController
 {
-	public function listAction()
+	public function indexAction()
 	{
-		$image = new \ATPGallery\Model\Image();
-		$images = $image->loadMultiple(null, array(), array(), "post_date DESC");
+		$category = new \ATPGallery\Model\Category();
+		$categories = $category->loadMultiple(array());
 		$thumbSize = $this->config("gallery.thumbnailSize");
 	
 		return new \Zend\View\Model\ViewModel(array(
+			'categories' => $categories,
+			'thumbnailSize' => $thumbSize,
+		));
+	}
+
+	public function listAction()
+	{
+		$category = new \ATPGallery\Model\Category();
+		$category->loadById($this->params()->fromQuery("id"));
+		$images = $category->getAtpgalleryImagesByCategory();;
+		$thumbSize = $this->config("gallery.thumbnailSize");
+	
+		return new \Zend\View\Model\ViewModel(array(
+			'category' => $category,
 			'images' => $images,
 			'thumbnailSize' => $thumbSize,
 		));

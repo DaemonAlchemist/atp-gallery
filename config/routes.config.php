@@ -9,7 +9,7 @@ return array(
                     'route'    => '/gallery[/:action[/:id]]',
                     'defaults' => array(
                         'controller'    => 'ATPGallery\Controller\IndexController',
-                        'action'        => 'list',
+                        'action'        => 'index',
                     ),
                 ),
             ),

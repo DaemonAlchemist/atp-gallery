@@ -1,24 +1,25 @@
 <?php $this->pageType("gallery-list")?>
 <?php $this->breadcrumbs("Gallery", $this->basePath() . "/gallery")?>
-<?php $this->headTitle($category->name)?>
 <?php $this->headTitle("Gallery")?>
 <?php $this->appendCss("/atp-gallery/css/style.less")?>
 
 <div class="gallery">
-	<h1><?=$category->name?> Gallery</h1>
-	<ul class="image-list">
-		<?php foreach($images as $image) { ?>
+	<h1>Image Gallery</h1>
+	<ul class="category-list">
+		<?php foreach($categories as $category) { ?>
 			<li>
 				<div class="gallery-list-item">
-					<a href="<?=$this->basePath() . "/gallery/view/" . $image->url?>">
+					<a href="<?=$this->basePath() . "/gallery/list/" . $category->url?>">
 						<img src="<?=$this->basePath() . $this->resize(array(
 							'width' => $thumbnailSize,
 							'height' => $thumbnailSize,
 							'mode' => 'fit',
-							'path' => $image->filePath("thumbnailFile")
+							'path' => !empty($category->thumbnailFile)
+								? $category->filePath("thumbnailFile")
+								: \ATPCms\Model\Image::missingImage()->filePath("imageFile")
 						))?>" />
+						<h3><?=$category->name?></h3>
 					</a>
-					<h3><?=$image->title?></h3>
 				</div>				
 			</li>
 		<?php } ?>

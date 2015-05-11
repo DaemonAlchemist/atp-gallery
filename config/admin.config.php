@@ -15,6 +15,13 @@ return array(
 					'Commentary' => array('description_html'),
 				),
 			),
+			'atpgallery_category' => array(
+				'displayName' => 'Category',
+				'class' => 'ATPGallery\Model\Category',
+				'category' => 'Gallery',
+				'displayColumns' => array('Name', 'Url'),
+				'defaultOrder' => 'name ASC',
+			),
 		),
 	),
 );
