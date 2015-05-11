@@ -3,12 +3,13 @@
 <?php $this->breadcrumbs("Gallery", $this->basePath() . "/gallery")?>
 <?php $this->headTitle($image->title)?>
 <?php $this->headTitle("Gallery")?>
+<?php $this->appendCss("/atp-gallery/css/style.less")?>
 
 <div class="gallery-view">
 	<div class="gallery-image">
+		<h1><?=$image->title?></h1>
 		<span>
 			<img src="<?=$this->basePath() . $image->filePath('imageFile')?>" />
-			<h1><?=$image->title?></h1>
 		</span>
 	</div>
 </div>

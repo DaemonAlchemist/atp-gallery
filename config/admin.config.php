@@ -10,7 +10,7 @@ return array(
 				'displayColumns' => array('Title', 'Url'),
 				'defaultOrder' => 'post_date DESC',
 				'tabs' => array(
-					'Details' => array('title', 'url', 'post_date'),
+					'Details' => array('category_id', 'title', 'url', 'post_date'),
 					'Images' => array('image_file', 'thumbnail_file'),
 					'Commentary' => array('description_html'),
 				),
@@ -19,7 +19,7 @@ return array(
 				'displayName' => 'Category',
 				'class' => 'ATPGallery\Model\Category',
 				'category' => 'Gallery',
-				'displayColumns' => array('Name', 'Url'),
+				'displayColumns' => array('Url'),
 				'defaultOrder' => 'name ASC',
 			),
 		),

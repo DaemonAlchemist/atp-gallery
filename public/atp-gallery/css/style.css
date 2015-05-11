@@ -32,3 +32,8 @@ ul.category-list li .gallery-list-item h3 {
  margin: 0;
  border: solid 2px #666;
 }
+div.gallery-view div.gallery-image span {
+ display: block;
+ width: 600px;
+ margin: auto;
+}

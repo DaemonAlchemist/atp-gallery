@@ -19,7 +19,7 @@ class IndexController extends \ATPCore\Controller\AbstractController
 	public function listAction()
 	{
 		$category = new \ATPGallery\Model\Category();
-		$category->loadById($this->params()->fromQuery("id"));
+		$category->loadByUrl($this->params("id"));
 		$images = $category->getAtpgalleryImagesByCategory();;
 		$thumbSize = $this->config("gallery.thumbnailSize");
 	
