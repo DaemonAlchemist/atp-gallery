@@ -1,10 +1,11 @@
 <?php $this->pageType("gallery-list")?>
+<?php $this->breadcrumbs($category->name, $this->basePath() . "/gallery/list/" . $category->url)?>
 <?php $this->breadcrumbs("Gallery", $this->basePath() . "/gallery")?>
 <?php $this->headTitle($category->name)?>
 <?php $this->headTitle("Gallery")?>
 <?php $this->appendCss("/atp-gallery/css/style.less")?>
 
-<div class="gallery">
+<div class="gallery" id="gallery-<?=$category->url?>">
 	<h1><?=$category->name?> Gallery</h1>
 	<ul class="image-list">
 		<?php foreach($images as $image) { ?>

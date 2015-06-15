@@ -1,5 +1,6 @@
 <?php $this->pageType("gallery-view")?>
 <?php $this->breadcrumbs($image->title, $this->basePath() . "/gallery/view/" . $image->url)?>
+<?php $this->breadcrumbs($image->category->name, $this->basePath() . "/gallery/list/" . $image->category->url)?>
 <?php $this->breadcrumbs("Gallery", $this->basePath() . "/gallery")?>
 <?php $this->headTitle($image->title)?>
 <?php $this->headTitle("Gallery")?>
