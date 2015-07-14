@@ -15,8 +15,10 @@
 						<img src="<?=$this->basePath() . $this->resize(array(
 							'width' => $thumbnailSize,
 							'height' => $thumbnailSize,
-							'mode' => 'fit',
-							'path' => $image->filePath("thumbnailFile")
+							'mode' => 'crop',
+							'path' => !empty($image->thumbnailFile)
+								? $image->filePath("thumbnailFile")
+								: $image->filePath("imageFile")
 						))?>" />
 					</a>
 					<h3><?=$image->title?></h3>
