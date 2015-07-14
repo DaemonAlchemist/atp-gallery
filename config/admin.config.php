@@ -23,5 +23,19 @@ return array(
 				'defaultOrder' => 'name ASC',
 			),
 		),
+		'parameters' => array(
+			'gallery-image-width' => array(
+				'displayName' => 'Max Image Width',
+				'group' => 'Gallery',
+				'type' => 'Text',
+				'default' => '800',
+			),
+			'gallery-image-height' => array(
+				'displayName' => 'Max Image Height',
+				'group' => 'Gallery',
+				'type' => 'Text',
+				'default' => '800',
+			),
+		),
 	),
 );

@@ -10,7 +10,12 @@
 	<div class="gallery-image">
 		<h1><?=$image->title?></h1>
 		<span>
-			<img src="<?=$this->basePath() . $image->filePath('imageFile')?>" />
+			<img src="<?=$this->basePath() . $this->resize(array(
+				'width' => $this->siteParam('gallery-image-width'),
+				'height' => $this->siteParam('gallery-image-height'),
+				'mode' => 'fit',
+				'path' => $image->filePath("imageFile")
+			))?>" />
 		</span>
 	</div>
 </div>
