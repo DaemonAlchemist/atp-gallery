@@ -4,8 +4,15 @@ namespace ATPGallery\Controller;
 
 class IndexController extends \ATPCore\Controller\AbstractController
 {
+    protected function init()
+    {
+        $this->cacheFor(24*60*60);
+    }
+
 	public function indexAction()
 	{
+        $this->init();
+
 		$category = new \ATPGallery\Model\Category();
 		$categories = $category->loadMultiple(array());
 		$thumbSize = $this->config("gallery.thumbnailSize");
@@ -18,6 +25,8 @@ class IndexController extends \ATPCore\Controller\AbstractController
 
 	public function listAction()
 	{
+        $this->init();
+
 		$category = new \ATPGallery\Model\Category();
 		$category->loadByUrl($this->params("id"));
 		$images = $category->getAtpgalleryImagesByCategory();;
@@ -32,6 +41,8 @@ class IndexController extends \ATPCore\Controller\AbstractController
 	
 	public function viewAction()
 	{
+        $this->init();
+
 		$url = $this->params('id');
 		$image = new \ATPGallery\Model\Image();
 		$image->loadByUrl($url);
