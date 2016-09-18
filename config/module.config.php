@@ -7,6 +7,6 @@ return array(
 		),
 	),
 	'gallery' => array(
-		'thumbnailSize' => 200,
+		'thumbnailSize' => 600,
 	),
 );
