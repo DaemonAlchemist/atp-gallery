@@ -29,7 +29,7 @@ class IndexController extends \ATPCore\Controller\AbstractController
 
 		$category = new \ATPGallery\Model\Category();
 		$category->loadByUrl($this->params("id"));
-		$images = $category->getAtpgalleryImagesByCategory();;
+		$images = $category->getAtpgalleryImagesByCategory(['orderBy' => "post_date DESC"]);
 		$thumbSize = $this->config("gallery.thumbnailSize");
 	
 		return new \Zend\View\Model\ViewModel(array(
